@@ -1,0 +1,18 @@
+distant_default: &distant_default
+  # use env data
+  host: ${DATABASE_HOST}
+  port: ${DATABASE_PORT}
+  username: ${DATABASE_USER}
+  password: ${DATABASE_PASSWORD}
+
+development:
+  <<: *distant_default
+  database: 'demo-development'
+
+test:
+  <<: *distant_default
+  database: 'demo-test'
+
+production:
+  <<: *distant_default
+  database: 'demo-production'
